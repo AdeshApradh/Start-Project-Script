@@ -30,4 +30,3 @@ FOR /F "tokens=1,2,3* delims= " %%i IN (project_locations.txt) DO (
         )
     ) 
 )
-
