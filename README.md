@@ -19,6 +19,9 @@ This file contains 3 values which are divided by spaces.
 You can use _**run**_ flag which will run a npm script in this example case it is _npm run android_ command.
 You can edit that command to your suitable case.
 
+## flags or parameter - start
+You can use _**start**_ flag which will run a npm start script in this example case it is _npm start_ command.
+You can edit that command to your suitable case.
 #
 ## Example - running the script from cmd prompt
 _considering you have placed the batch file in system32's folder so that you can run the script as a command line tool from anywhere!_

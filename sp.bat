@@ -6,17 +6,27 @@ FOR /F "tokens=1,2,3* delims= " %%i IN (project_locations.txt) DO (
         
         TITLE %%i
 
-        @echo ====================================
-        @echo OPENING VSCODE
-        @echo ====================================
+        
 
-        IF %2 EQU run (
+        IF "%~2" == "run" (
             @echo ====================================
-            @echo RUNNING THE PROJECT
+            @echo OPENING VSCODE
+            @echo ====================================
+            @echo ====================================
+            @echo RUNNING THE PROJECT ON ANDROID
             @echo ====================================
             code . && npm run android
-        ) ELSE (
-            code .   
+        ) 
+        IF "%~2" == "start" (
+            @echo ====================================
+            @echo OPENING VSCODE AND STARTING PROJECT
+            @echo ====================================
+            code . && npm start
+        )
+        IF "%~2" == ""  (
+            @echo ====================================
+            @echo CHANGING WORKING DIRECTORY
+            @echo ====================================
         )
     ) 
 )
